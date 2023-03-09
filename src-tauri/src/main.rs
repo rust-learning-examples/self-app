@@ -11,6 +11,16 @@ fn main() {
     tauri::Builder::default()
         .system_tray(app::tray::create_system_tray())
         .on_system_tray_event(app::tray::on_system_tray_event)
+        .on_window_event(move |event| {
+            match event.event() {
+                tauri::WindowEvent::CloseRequested { api, .. } => {
+                    let window = event.window().clone();
+                    window.hide().unwrap();
+                    api.prevent_close();
+                },
+                _ => ()
+            }
+        })
         .setup(|app| {
             #[cfg(target_os = "macos")]
             app.set_activation_policy(tauri::ActivationPolicy::Accessory);
