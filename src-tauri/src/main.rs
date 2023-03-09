@@ -9,6 +9,11 @@ fn greet(name: &str) -> String {
 
 fn main() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_positioner::init())
+        .plugin(tauri_plugin_autostart::init(
+            tauri_plugin_autostart::MacosLauncher::LaunchAgent,
+            None,
+        ))
         .system_tray(app::tray::create_system_tray())
         .on_system_tray_event(app::tray::on_system_tray_event)
         .on_window_event(move |event| {

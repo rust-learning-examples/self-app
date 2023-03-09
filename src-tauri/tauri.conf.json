@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "self-app",
-    "version": "0.0.0"
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -44,7 +44,12 @@
       "csp": null
     },
     "updater": {
-      "active": false
+      "active": true,
+      "dialog": false,
+      "endpoints": [
+        "https://wuyuedefeng.github.io/self-app/install.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDUyQzJBMzU1NDdGMEQ2MjMKUldRajF2QkhWYVBDVXN2WSt5SzYvM3JMUW56bHZzU3BWRWRGeTY5anNuZDY5RFFhUEl1TUlBMW8K"
     },
     "windows": [
       {
