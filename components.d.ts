@@ -10,6 +10,11 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
+    ElCol: typeof import('element-plus/es')['ElCol']
+    ElLink: typeof import('element-plus/es')['ElLink']
+    ElRow: typeof import('element-plus/es')['ElRow']
+    ElSpace: typeof import('element-plus/es')['ElSpace']
     Greet: typeof import('./src/components/Greet.vue')['default']
     IEpRefresh: typeof import('~icons/ep/refresh')['default']
     ISvgFileCopy: typeof import('~icons/svg/file-copy')['default']

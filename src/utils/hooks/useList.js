@@ -1,6 +1,5 @@
 import { reactive, onMounted } from 'vue'
 export const useList = (options) => {
-  console.log(options)
   console.assert(!options?.onload, 'must pass onload async function')
   const state = reactive({
     fetchCount: 0,

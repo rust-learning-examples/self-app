@@ -13,6 +13,9 @@ async function greet() {
 
 <template>
   <div class="card">
+    <i-svg-file-copy style="font-size: 50px; fill: red;"  @click="() => $router.push()"/>
+    <i-ep-refresh />
+    <hr />
     <input id="greet-input" v-model="name" placeholder="Enter a name..." />
     <button type="button" @click="greet()">Greet</button>
   </div>

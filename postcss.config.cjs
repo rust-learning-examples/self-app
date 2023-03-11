@@ -3,7 +3,7 @@ module.exports = {
     // pnpm i tailwindcss -D
     'tailwindcss': {},
     // pnpm i autoprefixer -D
-    // autoprefixer: {},
+    autoprefixer: {},
     // postcss-pxtorem 插件的版本需要 >= 5.0.0
     // 'postcss-pxtorem': {
     //   rootValue({ file }) {

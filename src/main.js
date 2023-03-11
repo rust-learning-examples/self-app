@@ -20,8 +20,3 @@ Object.defineProperties(app.config.globalProperties, {
 })
 
 app.mount("#app");
-
-
-setTimeout(() => {
- console.log(111, app.config.globalProperties)
-}, 3000)
