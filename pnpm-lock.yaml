@@ -12,9 +12,11 @@ specifiers:
   element-plus: ^2.2.35
   nprogress: ^0.2.0
   pinia: ^2.0.33
+  pinia-plugin-persistedstate: ^3.1.0
   postcss: ^8.4.21
   sass: ^1.58.3
   tailwindcss: ^3.2.7
+  tauri-plugin-sql-api: github:tauri-apps/tauri-plugin-sql
   unplugin-auto-import: ^0.15.1
   unplugin-icons: ^0.15.3
   unplugin-vue-components: ^0.24.1
@@ -28,6 +30,8 @@ dependencies:
   element-plus: 2.2.35_vue@3.2.47
   nprogress: 0.2.0
   pinia: 2.0.33_vue@3.2.47
+  pinia-plugin-persistedstate: 3.1.0_pinia@2.0.33
+  tauri-plugin-sql-api: github.com/tauri-apps/tauri-plugin-sql/b945c7a74ed207771420f7f0809d20ba66d55f70
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
 
@@ -1803,6 +1807,14 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /pinia-plugin-persistedstate/3.1.0_pinia@2.0.33:
+    resolution: {integrity: sha512-8UN+vYMEPBdgNLwceY08mi5olI0wkYaEb8b6hD6xW7SnBRuPydWHlEhZvUWgNb/ibuf4PvufpvtS+dmhYjJQOw==}
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: 2.0.33_vue@3.2.47
+    dev: false
+
   /pinia/2.0.33_vue@3.2.47:
     resolution: {integrity: sha512-HOj1yVV2itw6rNIrR2f7+MirGNxhORjrULL8GWgRwXsGSvEqIQ+SE0MYt6cwtpegzCda3i+rVTZM+AM7CG+kRg==}
     peerDependencies:
@@ -2606,3 +2618,11 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  github.com/tauri-apps/tauri-plugin-sql/b945c7a74ed207771420f7f0809d20ba66d55f70:
+    resolution: {commit: b945c7a74ed207771420f7f0809d20ba66d55f70, repo: git+ssh://git@github.com/tauri-apps/tauri-plugin-sql.git, type: git}
+    name: tauri-plugin-sql-api
+    version: 0.0.0
+    dependencies:
+      '@tauri-apps/api': 1.2.0
+    dev: false

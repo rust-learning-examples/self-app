@@ -14,6 +14,7 @@ fn main() {
             tauri_plugin_autostart::MacosLauncher::LaunchAgent,
             None,
         ))
+        .plugin(tauri_plugin_sql::Builder::default().build())
         .system_tray(app::tray::create_system_tray())
         .on_system_tray_event(app::tray::on_system_tray_event)
         .on_window_event(move |event| {

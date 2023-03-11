@@ -12,10 +12,21 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false,
+      "all": true,
       "shell": {
         "all": false,
         "open": true
+      },
+      "fs": {
+        "scope": ["$APP", "$APP/*"]
+      },
+      "path": {
+        "all": true
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": ["https://**", "http://**"]
       },
       "dialog": {
         "all": true,
@@ -23,6 +34,7 @@
         "save": true
       }
     },
+    "macOSPrivateApi": true,
     "systemTray": {
       "iconPath": "icons/icon.png",
       "iconAsTemplate": true,

@@ -5,9 +5,13 @@
 </script>
 
 <template>
-  <main class="main-body">
-    <router-view></router-view>
-  </main>
+  <el-config-provider size="small" :z-index="3000">
+    <BaseLayout class="main-body">
+      <template #main>
+        <router-view></router-view>
+      </template>
+    </BaseLayout>
+  </el-config-provider>
 </template>
 
 <style lang="scss" scoped>

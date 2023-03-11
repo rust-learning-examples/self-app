@@ -13,13 +13,19 @@ edition = "2021"
 tauri-build = { version = "1.2", features = [] }
 
 [dependencies]
-tauri = { version = "1.2", features = ["dialog-all", "shell-open", "system-tray", "updater"] }
+tauri = { version = "1.2", features = ["api-all", "macos-private-api", "system-tray", "updater"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 anyhow = "1.0"
 
 tauri-plugin-positioner = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "dev" }
 tauri-plugin-autostart = { git = "https://github.com/lencx/tauri-plugins-workspace", branch = "dev" }
+
+# https://github.com/tauri-apps/tauri-plugin-sql
+[dependencies.tauri-plugin-sql]
+git = "https://github.com/tauri-apps/plugins-workspace"
+branch = "dev"
+features = ["sqlite"] # or "postgres", or "mysql"
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem

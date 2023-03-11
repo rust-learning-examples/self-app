@@ -13,7 +13,11 @@ export const createRouter = () => {
         ]
       },
       { path: '/controlPanel', name: 'controlPanel', component: () => import('@/views/controlPanel') },
-      { path: '/about', name: 'about', component: () => import('@/views/about') }
+      { path: '/about', name: 'about', component: () => import('@/views/about') },
+      { path: '/others', name: 'others', meta: {title: '其他'}, component: () => import('@/views/others'), children: [
+          { path: 'stocks', name: 'others/stocks', meta: { title: 'Stock' }, component: () => import('@/views/others/stocks') }
+        ]
+      }
     ])
   }))
   return router

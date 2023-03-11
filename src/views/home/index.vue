@@ -1,5 +1,5 @@
 <template>
-  <main class="page">
+  <main class="main">
     <el-row :gutter="15">
       <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
         <el-card header="搜索" shadow="hover">
@@ -91,9 +91,6 @@
 </template>
 
 <style lang="scss" scoped>
-.page {
-  padding: 15px;
-}
 
 .el-col {
   margin-bottom: 15px;

@@ -1,6 +1,6 @@
 import { reactive, onMounted } from 'vue'
 export const useList = (options) => {
-  console.assert(!options?.onload, 'must pass onload async function')
+  console.assert(options?.onLoad, 'must pass onLoad async function')
   const state = reactive({
     fetchCount: 0,
     isRefreshing: false,
@@ -8,6 +8,7 @@ export const useList = (options) => {
     isFinished: false,
     isError: false,
     errorInfo: null,
+    query: {...options.query},
     list: [],
     pagination: {
       pageNo: 1,
@@ -39,14 +40,24 @@ export const useList = (options) => {
       state.isRefreshing = true
       await state.onLoad()
     },
-    async onLoad() {
+    async onLoad(defaultQuery = {}, shouldReset = false) {
+      const { pageNo, pageSize, ...otherQuery } = defaultQuery
+      if (shouldReset) {
+        this.query = otherQuery
+      }
+      if (Object.prototype.hasOwnProperty.call(defaultQuery, 'pageNo')) {
+        state.pagination.pageNo = pageNo
+      }
+      if (Object.prototype.hasOwnProperty.call(defaultQuery, 'pageSize')) {
+        state.pagination.pageSize = pageSize
+      }
       state.isLoading = true
       state.fetchCount++
       if (state.isRefreshing) {
         state.list = []
         state.isRefreshing = false
       }
-      await options.onLoad().then(data => {
+      await options.onLoad(state).then(data => {
         state.isError = false
         state.errorInfo = null
         return data

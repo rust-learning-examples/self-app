@@ -29,8 +29,8 @@ export const useUserStore = defineStore('userStore', {
     }
   },
   persist: {
-    // key: 'desktopStore', // default: store.$id
-    // storage: localStorage, // default: localStorage
+    // key: 'userStore', // default: store.$id
+    // storage, // default: localStorage
     paths: ['authInfo', 'userInfo'],
     debug: import.meta.env.MODE === 'development'
   }
