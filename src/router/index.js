@@ -7,6 +7,7 @@ export const createRouter = () => {
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: useRoutes([
       { path: '/', name: 'home', meta: {title: "首页"}, component: Home },
+      { path: '/topics', name: 'topics', meta: {title: "热门文章"}, component: () => import('@/views/topics') },
       { path: '/auth', redirect: '/auth', component: () => import('@/views/auth'), children: [
           { path: 'login', name: 'auth/login', component: () => import('@/views/auth/login') },
           { path: 'register', name: 'auth/register', component: () => import('@/views/auth/register') },

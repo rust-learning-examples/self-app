@@ -38,6 +38,7 @@ export default defineComponent({
             }),
             routes: computed(() => [
                 router.getRoute('home'),
+                router.getRoute('topics'),
                 router.getRoute('others'),
             ])
         })

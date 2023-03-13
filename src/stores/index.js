@@ -1,10 +1,11 @@
 import { createPinia as createVuePinia } from 'pinia'
 import { createPersistedState } from 'pinia-plugin-persistedstate'
+import { storage } from '@/services'
 
-export const createPiniaAsync = async () => {
+export const createPinia = () => {
   const pinia = createVuePinia()
   pinia.use(createPersistedState({
-    storage: (await import('@/services')).storage,
+    storage,
     key: id => `__persisted__${id}`,
     beforeRestore: (ctx) => {
       console.log(`about to restore '${ctx.store.$id}'`)

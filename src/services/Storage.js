@@ -24,11 +24,11 @@ class Storage {
     await fs.writeFile({contents: JSON.stringify(this.data), path: this.filename }, {dir: fs.BaseDirectory.AppConfig})
   }
   getItem(key) {
-    console.log('getItem', key)
+    // console.log('getItem', key)
     return this.data[key]
   }
   setItem(key, value) {
-    console.log('setItem', key, value)
+    // console.log('setItem', key, value)
     this.data[key] = value
     this.writeToFileAsync()
   }
