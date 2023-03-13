@@ -16,7 +16,7 @@ specifiers:
   postcss: ^8.4.21
   sass: ^1.58.3
   tailwindcss: ^3.2.7
-  tauri-plugin-sql-api: github:tauri-apps/tauri-plugin-sql
+  tauri-plugin-sql-api: git@github.com:tauri-apps/tauri-plugin-sql.git
   unplugin-auto-import: ^0.15.1
   unplugin-icons: ^0.15.3
   unplugin-vue-components: ^0.24.1
@@ -31,7 +31,7 @@ dependencies:
   nprogress: 0.2.0
   pinia: 2.0.33_vue@3.2.47
   pinia-plugin-persistedstate: 3.1.0_pinia@2.0.33
-  tauri-plugin-sql-api: github.com/tauri-apps/tauri-plugin-sql/b945c7a74ed207771420f7f0809d20ba66d55f70
+  tauri-plugin-sql-api: github.com/tauri-apps/tauri-plugin-sql/3a8b9a6b244df7512bc5ef8692cebdedbab3ccce
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
 
@@ -2619,8 +2619,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  github.com/tauri-apps/tauri-plugin-sql/b945c7a74ed207771420f7f0809d20ba66d55f70:
-    resolution: {commit: b945c7a74ed207771420f7f0809d20ba66d55f70, repo: git+ssh://git@github.com/tauri-apps/tauri-plugin-sql.git, type: git}
+  github.com/tauri-apps/tauri-plugin-sql/3a8b9a6b244df7512bc5ef8692cebdedbab3ccce:
+    resolution: {commit: 3a8b9a6b244df7512bc5ef8692cebdedbab3ccce, repo: git+ssh://git@github.com/tauri-apps/tauri-plugin-sql.git, type: git}
     name: tauri-plugin-sql-api
     version: 0.0.0
     dependencies:

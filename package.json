@@ -16,7 +16,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.0.33",
     "pinia-plugin-persistedstate": "^3.1.0",
-    "tauri-plugin-sql-api": "github:tauri-apps/tauri-plugin-sql",
+    "tauri-plugin-sql-api": "git@github.com:tauri-apps/tauri-plugin-sql.git",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },

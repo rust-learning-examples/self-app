@@ -75,7 +75,7 @@ export default defineConfig(async params => {
     resolve: {
       extensions: ['.json', '.js', 'mjs', 'cjs', '.ts', '.jsx', '.tsx', '.vue'],
       alias: {
-        '@': pathResolve('./src'),
+        '@': pathResolve('./src')
       },
     },
     // to make use of `TAURI_DEBUG` and other env variables
